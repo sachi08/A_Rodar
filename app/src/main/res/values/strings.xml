@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">A_Rodar</string>
+    <string name="Login">Iniciar sesión</string>
+    <string name="title_roll_out">A RODAR</string>
+    <string name="No_account">¿No tienes cuenta? Cree una.</string>
+    <string name="Forgot_Password">¿Ha olvidado su contraseña?</string>
+    <string name="Register">Registrarse</string>
+    <string name="Email">Correo Electrónico</string>
+    <string name="Password">Contraseña</string>
+    <string name="Registration_title">REGISTRO</string>
+    <string name="name">Nombre</string>
+    <string name="phone_number">Número de teléfono</string>
+    <string name="repear_password">Repetir Contraseña</string>
+    <string name="login_title">INICIAR SESIÓN</string>
+</resources>
