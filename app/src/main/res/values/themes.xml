@@ -6,4 +6,20 @@
     </style>
 
     <style name="Theme.A_Rodar" parent="Base.Theme.A_Rodar" />
+
+    <style name="Theme.A_Rodar.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo_dark</item>
+        <item name="windowSplashScreenAnimationDuration">300</item>
+        <item name="postSplashScreenTheme">@style/Base.Theme.A_Rodar</item>
+    </style>
+
+    <style name="Theme.A_Rodar.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.A_Rodar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.A_Rodar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

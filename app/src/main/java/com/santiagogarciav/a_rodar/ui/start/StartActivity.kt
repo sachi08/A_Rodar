@@ -3,6 +3,7 @@ package com.santiagogarciav.a_rodar.ui.start
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.santiagogarciav.a_rodar.R
 import com.santiagogarciav.a_rodar.databinding.ActivityStartBinding
 import com.santiagogarciav.a_rodar.ui.login.LoginActivity
@@ -13,10 +14,12 @@ class StartActivity : AppCompatActivity() {
 
     private lateinit var startBinding: ActivityStartBinding
     override fun onCreate(savedInstanceState: Bundle?) {
+        val screenSplash = installSplashScreen()
         super.onCreate(savedInstanceState)
         startBinding = ActivityStartBinding.inflate(layoutInflater)
         val view = startBinding.root
         setContentView(view)
+        screenSplash.setKeepOnScreenCondition{false}
 
         startBinding.startLoginButton.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)

@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.santiagogarciav.a_rodar.ui.main.MainActivity
 import com.santiagogarciav.a_rodar.databinding.ActivityRegisterBinding
 import com.santiagogarciav.a_rodar.ui.login.LoginActivity
+import com.santiagogarciav.a_rodar.ui.navdrawer.NavigationDrawerActivity
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -31,7 +32,7 @@ class RegisterActivity : AppCompatActivity() {
             val repeatPassword = registerBinding.registerRepeatPasswordEditText.text.toString()
             val flag = registerViewModel.validateFields(email, password, repeatPassword)
             if(flag){
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, NavigationDrawerActivity::class.java)
                 startActivity(intent)
             }
         }

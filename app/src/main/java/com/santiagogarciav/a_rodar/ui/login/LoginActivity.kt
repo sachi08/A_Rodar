@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.santiagogarciav.a_rodar.databinding.ActivityLoginBinding
 import com.santiagogarciav.a_rodar.ui.login.LoginViewModel
 import com.santiagogarciav.a_rodar.ui.main.MainActivity
+import com.santiagogarciav.a_rodar.ui.navdrawer.NavigationDrawerActivity
 import com.santiagogarciav.a_rodar.ui.register.RegisterActivity
 
 class LoginActivity : AppCompatActivity() {
@@ -30,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
             val password = loginBinding.loginPasswordEditText.text.toString()
             val flag = loginViewModel.validateFields(email, password)
             if(flag){
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, NavigationDrawerActivity::class.java)
                 startActivity(intent)
             }
         }

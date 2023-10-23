@@ -13,17 +13,15 @@
         android:theme="@style/Theme.A_Rodar"
         tools:targetApi="31">
         <activity
+            android:name=".ui.navdrawer.NavigationDrawerActivity"
+            android:exported="true"
+            android:label="@string/title_activity_navigation_drawer"
+            android:theme="@style/Theme.A_Rodar.NoActionBar" >
+        </activity>
+        <activity
             android:name=".ui.start.StartActivity"
-            android:exported="false">
-
-        </activity>
-        <activity
-            android:name=".ui.register.RegisterActivity"
-            android:exported="false">
-        </activity>
-        <activity
-            android:name=".ui.login.LoginActivity"
-            android:exported="true" >
+            android:exported="true"
+            android:theme="@style/Theme.A_Rodar.Starting">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,8 +29,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.main.MainActivity"
+            android:name=".ui.register.RegisterActivity"
             android:exported="false"></activity>
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false"></activity>
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
