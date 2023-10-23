@@ -1,11 +1,13 @@
 package com.santiagogarciav.a_rodar.ui.register
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import com.santiagogarciav.a_rodar.ui.main.MainActivity
 import com.santiagogarciav.a_rodar.databinding.ActivityRegisterBinding
-import com.santiagogarciav.a_rodar.ui.register.RegisterViewModel
+import com.santiagogarciav.a_rodar.ui.login.LoginActivity
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -27,9 +29,16 @@ class RegisterActivity : AppCompatActivity() {
             val email = registerBinding.registerEmailEditText.text.toString()
             val password = registerBinding.registerPasswordEditText.text.toString()
             val repeatPassword = registerBinding.registerRepeatPasswordEditText.text.toString()
+            val flag = registerViewModel.validateFields(email, password, repeatPassword)
+            if(flag){
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            }
+        }
 
-
-            registerViewModel.validateFields(email, password, repeatPassword)
+        registerBinding.registerLoginButton.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
         }
 
     }
