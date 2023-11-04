@@ -26,18 +26,26 @@ class LoginActivity : AppCompatActivity() {
             showErrorMsg(msg)
         }
 
+        loginViewModel.registerSuccess.observe( this){
+            val intent = Intent(this, NavigationDrawerActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
         loginBinding.loginButton.setOnClickListener {
             val email = loginBinding.loginEmailEditText.text.toString()
             val password = loginBinding.loginPasswordEditText.text.toString()
-            val flag = loginViewModel.validateFields(email, password)
-            if(flag){
-                val intent = Intent(this, NavigationDrawerActivity::class.java)
-                startActivity(intent)
-            }
+            loginViewModel.validateFields(email, password)
+//            val flag = loginViewModel.validateFields(email, password)
+//            if(flag){
+//                val intent = Intent(this, NavigationDrawerActivity::class.java)
+//                startActivity(intent)
+//            }
         }
         loginBinding.loginRegisterButton.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
+
         }
 
 

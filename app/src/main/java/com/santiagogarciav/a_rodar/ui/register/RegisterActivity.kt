@@ -26,15 +26,20 @@ class RegisterActivity : AppCompatActivity() {
             showErrorMsg(msg)
         }
 
+        registerViewModel.registerSuccess.observe( this){
+            onBackPressedDispatcher.onBackPressed()
+        }
+
         registerBinding.registerButton.setOnClickListener {
             val email = registerBinding.registerEmailEditText.text.toString()
             val password = registerBinding.registerPasswordEditText.text.toString()
             val repeatPassword = registerBinding.registerRepeatPasswordEditText.text.toString()
-            val flag = registerViewModel.validateFields(email, password, repeatPassword)
-            if(flag){
-                val intent = Intent(this, NavigationDrawerActivity::class.java)
-                startActivity(intent)
-            }
+            registerViewModel.validateFields(email, password, repeatPassword)
+//            val flag = registerViewModel.validateFields(email, password, repeatPassword)
+//            if(flag){
+//                val intent = Intent(this, NavigationDrawerActivity::class.java)
+//                startActivity(intent)
+//            }
         }
 
         registerBinding.registerLoginButton.setOnClickListener {

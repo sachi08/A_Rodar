@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "973876332045",
+    "project_id": "a-rodar-9ca21",
+    "storage_bucket": "a-rodar-9ca21.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:973876332045:android:f0bdb8d53aa77eb72ef744",
+        "android_client_info": {
+          "package_name": "com.santiagogarciav.a_rodar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOhUAGbRQkusfhMgH9_iv9wBKbQU7-8T8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
