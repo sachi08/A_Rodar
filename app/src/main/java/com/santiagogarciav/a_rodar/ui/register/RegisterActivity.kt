@@ -5,10 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import com.santiagogarciav.a_rodar.ui.main.MainActivity
 import com.santiagogarciav.a_rodar.databinding.ActivityRegisterBinding
 import com.santiagogarciav.a_rodar.ui.login.LoginActivity
-import com.santiagogarciav.a_rodar.ui.navdrawer.NavigationDrawerActivity
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -31,10 +29,12 @@ class RegisterActivity : AppCompatActivity() {
         }
 
         registerBinding.registerButton.setOnClickListener {
-            val email = registerBinding.registerEmailEditText.text.toString()
-            val password = registerBinding.registerPasswordEditText.text.toString()
-            val repeatPassword = registerBinding.registerRepeatPasswordEditText.text.toString()
-            registerViewModel.validateFields(email, password, repeatPassword)
+            val email = registerBinding.registerEmailEditText.text.toString().trim()
+            val password = registerBinding.registerPasswordEditText.text.toString().trim()
+            val repeatPassword = registerBinding.registerRepeatPasswordEditText.text.toString().trim()
+            val name = registerBinding.registerNameEditText.text.toString().trim()
+            val number = registerBinding.registerNumberEditText.text.toString().trim()
+            registerViewModel.validateFields(email, password, repeatPassword, name, number)
 //            val flag = registerViewModel.validateFields(email, password, repeatPassword)
 //            if(flag){
 //                val intent = Intent(this, NavigationDrawerActivity::class.java)

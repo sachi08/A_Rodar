@@ -29,7 +29,8 @@ class LoginActivity : AppCompatActivity() {
         loginViewModel.registerSuccess.observe( this){
             val intent = Intent(this, NavigationDrawerActivity::class.java)
             startActivity(intent)
-            finish()
+//            finish()
+            finishAffinity()
         }
 
         loginBinding.loginButton.setOnClickListener {

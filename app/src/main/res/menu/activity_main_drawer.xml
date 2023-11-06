@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_maps"
-            android:title="Maps" />
+            android:id="@+id/mapFragment"
+            android:title="@string/maps" />
         <item
-            android:id="@+id/nav_routes"
-            android:title="Routes" />
+            android:id="@+id/routesFragment"
+            android:title="@string/routes" />
         <item
-            android:id="@+id/nav_details"
-            android:title="Details" />
+            android:id="@+id/detailsFragment"
+            android:title="@string/details" />
     </group>
 </menu>
